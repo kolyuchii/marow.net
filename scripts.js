@@ -1,9 +1,5 @@
-import {countdown} from './scripts/countdown.js';
 import './scripts/tic-tac-toe.js';
 import './scripts/mine.js';
-const element = document.querySelector('#countdown');
-const destinationDate = new Date('08/07/2022');
-countdown(element, destinationDate);
 
 const changeBG = () => {
     document.body.style.backgroundColor = getRandomColor();

@@ -19,6 +19,7 @@ class App {
     this.resultEl = this.wrapperEl.querySelector(".js-result");
     this.resultTextEl = this.wrapperEl.querySelector(".js-result-text");
     this.gridEl = this.wrapperEl.querySelector(".js-grid");
+    this.veilEl = this.wrapperEl.querySelector('.js-veil');
 
     this.init();
   }
@@ -37,6 +38,7 @@ class App {
     this.gameMode = GAME_MODE.STARTED;
     this.draw();
     this.gridEl.classList.remove("hidden");
+    this.veilEl.classList.remove("hidden");
   }
   getMatrix(matrixSize) {
     const matrix = [];

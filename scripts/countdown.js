@@ -38,3 +38,7 @@ const translation = (number, str) => {
   }
   return `${number} ${str} `;
 };
+
+const element = document.querySelector('#countdown');
+const destinationDate = new Date('08/07/2022');
+countdown(element, destinationDate);

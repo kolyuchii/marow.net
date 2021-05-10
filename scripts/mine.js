@@ -1,7 +1,7 @@
 class Mine {
-    matrixX = 15;
-    matrixY = 10;
-    minesCount = 1;
+    matrixX = 30;
+    matrixY = 20;
+    minesCount = 120;
     dim = [
         [-1, -1],
         [-1, 0],
@@ -24,10 +24,12 @@ class Mine {
 
         this.gridEl.addEventListener('click', this.onClick.bind(this));
         this.newGameEl.addEventListener('click', this.newGame.bind(this));
+        this.veilEl = this.wrapperEl.querySelector('.js-veil');
     }
 
     newGame() {
         this.closedCells = this.matrixX * this.matrixY;
+        this.veilEl.classList.remove("hidden");
         this.isGameFinished = false;
         this.generateMatrix();
     }
@@ -112,7 +114,7 @@ class Mine {
                     this.matrix[y + row][x + cell] &&
                     this.matrix[y + row][x + cell].isOpened === false &&
                     this.matrix[y + row][x + cell].isMine === false &&
-                    this.matrix[y + row][x + cell].value === 0
+                    (this.matrix[y + row][x + cell].value === 0 || this.matrix[y + row][x + cell].value === 1)
                 ) {
                     this.matrix[y + row][x + cell].isOpened = true;
                     this.closedCells--;

@@ -6,52 +6,71 @@
     <title>Nikolai Marov</title>
 </head>
 <body>
-    <aside class="app js-app">
-        <div class="controls">
-            <span class="controls__button js-new-game">
-                New Game
-            </span>
-        </div>
-        <div class="grid js-grid hidden"></div>
-        <div class="grid__result hidden js-result">
-            <div>
-                <h3 class="js-result-text"></h3>
-                <div class="grid__result_restart js-new-game">
-                    Restart the game
+    <aside class="sidebar content">
+        <nav class="sidebar_nav">
+            <h2>Pages:</h2>
+            <ul class="sidebar_nav__list">
+                <li><a href="./index.html" class="active">Coding</a></li>
+                <li><a href="./cycling.html">Cycling</a></li>
+            </ul>
+            <h2>Links:</h2>
+            <ul class="sidebar_nav__list">
+                <li><a href="https://github.com/kolyuchii">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/kolyuchii/">Linkedin</a></li>
+                <li><a href="https://twitter.com/kolyuchii">Twitter</a></li>
+                <li><a href="https://www.facebook.com/kolyuchii/">Facebook</a></li>
+                <li><a href="https://www.instagram.com/kolyuchii/">Bicycle instagram</a></li>
+                <li><a href="https://www.instagram.com/playgroundintheshed/">Workshop instagram</a></li>
+                <li><a href="https://www.tiktok.com/@kolyuchii?">Tiktok</a></li>
+            </ul>
+        </nav>
+
+        <h2>Games:</h2>
+        <div>
+            <aside class="app js-app">
+                <div class="controls">
+                    <span class="controls__button js-new-game">
+                        Tic Tac Toe
+                    </span>
                 </div>
-            </div>
+                <div class="veil js-veil hidden">
+                    <div class="grid js-grid hidden"></div>
+                    <div class="grid__result hidden js-result">
+                        <div>
+                            <h3 class="js-result-text"></h3>
+                            <div class="grid__result_restart js-new-game">
+                                Restart the game
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <aside class="mine js-mine">
+                <div class="controls">
+                    <div class="controls__button js-new-game">MineSweeper</div>
+                </div>
+                <div class="veil js-veil hidden">
+                    <div class="mine__grid js-grid"></div>
+                </div>
+            </aside>
         </div>
-    </aside>
-    <aside class="mine js-mine">
-        <div class="js-new-game">New game</div>
-        <div class="mine__grid js-grid"></div>
     </aside>
 
-    <header>
+    <header class="header content">
         <h1>~ Hi there!</h1>
-        <h2>My name is Nikolai and this is another "useful" internet page.</h2>
-        <h3>Most of the day I'm Frontend developer.</h3>
     </header>
 
-    <code>Who I'm without my IDE? A cyclist, a woodworker, ... // TODO: finish this joke someday</code>
-    <p>My pet project: <a href="https://aloud.app/">Aloud app</a></p>
-
-    <h2>Links:</h2>
-    <ul>
-        <li><a href="https://github.com/kolyuchii">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/kolyuchii/">Linkedin</a></li>
-        <li><a href="https://twitter.com/kolyuchii">Twitter</a></li>
-        <li><a href="https://www.facebook.com/kolyuchii/">Facebook</a></li>
-        <li><a href="https://www.instagram.com/kolyuchii/">Bicycle instagram</a></li>
-        <li><a href="https://www.instagram.com/playgroundintheshed/">Workshop instagram</a></li>
-        <li><a href="https://www.tiktok.com/@kolyuchii?">Tiktok</a></li>
-    </ul>
-
-    <section>
-        <h2>Time to <a href="https://londonedinburghlondon.com/">London Edinburgh London</a> ride: <b id="countdown">0</b></h2>
-        <p>My previous attempt:</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/XNxlyVgr5q8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <section class="page content">
+        <h2>My name is Nikolai and this is another "useful" internet page.</h2>
+        <h3>Most of the day I'm Frontend developer.</h3>
+        <code>Who I'm without my IDE? A cyclist, a woodworker, ... // TODO: finish this joke someday</code>
+        <p>My pet project: <a href="https://aloud.app/" target="_blank">Aloud app</a></p>
     </section>
+
+    <footer class="footer content">
+        The end
+    </footer>
+
     <script type="module" src="./scripts.js"></script>
 </body>
 </html>
