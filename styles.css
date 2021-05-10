@@ -1,0 +1,177 @@
+body {
+    max-width: 90%;
+    margin: 0 auto;
+    transition: background-color 1s;
+    font-family: system-ui;
+}
+
+code {
+    background-color: rgba(0, 0, 0, .1);
+    border: 1px solid rgba(0, 0, 0, .3);
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+}
+
+.app {
+    position: relative;
+}
+.grid {
+    width: 600px;
+    margin: 0 auto;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    position: relative;
+}
+
+.grid__row {
+     display: flex;
+     justify-content: space-between;
+     border-bottom: 1px solid;
+ }
+.grid__cell {
+    text-align: center;
+    flex: 1 0 auto;
+    height: auto;
+    align-items: center;
+    border-right: 1px solid;
+    transition: background-color 0.2s, background-image 0.5s;
+    cursor: pointer;
+    background-size: 100%;
+}
+
+.grid__cell.is-selected {
+     cursor: default;
+ }
+
+.grid__cell.type-x {
+     background-image: url("./images/x-mark-512.png");
+ }
+
+.grid__cell.type-o {
+     background-image: url("./images/circle-outline-512.png");
+ }
+
+.grid__cell:hover {
+     background-color: #eee;
+ }
+
+.grid__cell:before {
+     content: '';
+     float: left;
+     padding-top: 100%;
+ }
+
+
+.grid__result {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 1px;
+    bottom: 1px;
+    background-color: #fff;
+    opacity: 0.9;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid__result_restart {
+    cursor: pointer;
+    color: #2667B6;
+    font-size: 20px;
+}
+.grid__result_restart:hover {
+     text-decoration: underline;
+ }
+
+.controls {
+    text-align: center;
+    margin: 10px 0 20px;
+}
+.controls__button {
+     font-size: 12px;
+     padding: 10px 20px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.mine__grid {
+    display: inline-block;
+}
+.mine__grid .row {
+    height: 20px;
+    display: flex;
+    justify-items: center;
+}
+    .mine__grid .cell {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #666;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 12px;
+        text-align: center;
+        font-weight: 900;
+        margin: 0 -1px -1px 0;
+        position: relative;
+    }
+    .cell__type1 {
+        color: green;
+    }
+    .cell__type2 {
+        color: blue;
+    }
+    .cell__type3 {
+        color: saddlebrown;
+    }
+    .cell__type4 {
+        color: fuchsia;
+    }
+    .cell__type5 {
+        color: darkorange;
+    }
+    .cell__type6 {
+        color: sienna;
+    }
+    .cell__type7 {
+        color: aqua;
+    }
+    .cell__type8 {
+        color: darkmagenta;
+    }
+    .cell__type9:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "X";
+        background-color: black;
+        color: red;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .mine__grid .cell.closed {
+        position: relative;
+    }
+    .mine__grid .cell.closed:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        background-color: red;
+    }
+    .finished .cell.closed:after {
+        display: none;
+    }
