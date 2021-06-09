@@ -3,95 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="favicon.png" sizes="16x16" type="image/png">
     <title>Nikolai Marov</title>
 </head>
 <body>
     <aside class="sidebar content">
         <nav class="sidebar_nav">
-            <h2>Pages:</h2>
+            <h3>Pages:</h3>
             <ul class="sidebar_nav__list">
                 <li><a href="./index.html" class="active">Coding</a></li>
                 <li><a href="./cycling.html">Cycling</a></li>
             </ul>
-            <h2>Links:</h2>
+            <h3>Links:</h3>
             <ul class="sidebar_nav__list">
                 <li><a href="https://github.com/kolyuchii">GitHub</a></li>
                 <li><a href="https://www.linkedin.com/in/kolyuchii/">Linkedin</a></li>
-                <li><a href="https://twitter.com/kolyuchii">Twitter</a></li>
-                <li><a href="https://www.facebook.com/kolyuchii/">Facebook</a></li>
-                <li><a href="https://www.instagram.com/kolyuchii/">Bicycle instagram</a></li>
-                <li><a href="https://www.instagram.com/playgroundintheshed/">Workshop instagram</a></li>
-                <li><a href="https://www.tiktok.com/@kolyuchii?">Tiktok</a></li>
-                <li><a href="https://www.strava.com/athletes/3456393">Strava</a></li>
                 <li><a href="https://leetcode.com/kolyuchii/">Leetcode</a></li>
             </ul>
         </nav>
-
-        <h2>Stuff:</h2>
-        <div>
-            <aside class="app js-app">
-                <div class="controls">
-                    <span class="controls__button js-new-game">
-                        Tic Tac Toe
-                    </span>
-                </div>
-                <div class="veil js-veil hidden">
-                    <div class="grid js-grid hidden"></div>
-                    <div class="grid__result hidden js-result">
-                        <div>
-                            <h3 class="js-result-text"></h3>
-                            <div class="grid__result_restart js-new-game">
-                                Restart the game
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </aside>
-            <aside class="mine js-mine">
-                <div class="controls">
-                    <div class="controls__button js-new-game">MineSweeper</div>
-                </div>
-                <div class="veil js-veil hidden">
-                    <div class="mine__grid js-grid"></div>
-                </div>
-            </aside>
-        </div>
     </aside>
 
     <header class="header content">
-        <h1>~ Hi there!</h1>
+        <h1 class="header__title">~/Nikolai Marov <span class="header__title_page-name">main</span></h1>
     </header>
 
     <section class="page content">
         <article class="page__article">
-            <h2>My name is Nikolai and this is another "useful" internet page.</h2>
-            <h3>Most of the day I'm Frontend developer.</h3>
-            <code>Who I'm without my IDE? A cyclist, a woodworker, ... // TODO: finish this joke someday</code>
-            <p>My pet project: <a href="https://aloud.app/" target="_blank">Aloud app</a></p>
-            <p>Garmin data field: <a href="https://github.com/kolyuchii/TravelCalc">Time to Rest</a></p>
+            <h3 class="page__article-title">About</h3>
+            <p>I'm frontend developer since <b>2007</b>.</p>
         </article>
         <article class="page__article">
-            <h3>Job History</h3>
+            <h3 class="page__article-title">Base skills</h3>
+            <p><strong>Primary: </strong>
+                JavaScript, ReactJS, ReduxJS, React Native, GatsbyJS,
+                AWS, Firebase, Webpack, Grunt, Gulp, Backbone, jQuery,
+                lodash/underscore, HTML/CSS (plain or sass/less/css-in-js),
+                TypeScript, Node.js, Jest, Git, Jira, XML, REST</p>
+            <p><strong>Secondary:</strong> PHP, MySQL, propel, ORM (doctrine), Symfony Framework, Kohana, Codeigniter, Scrum, Waterflow</p>
+        </article>
+        <article class="page__article">
+            <p>My pet project: <a href="https://aloud.app/" target="_blank">Aloud app</a> - NodeJS, React Native, LESS, Firebase, Typescript</p>
+            <p>Garmin data field: <a href="https://github.com/kolyuchii/TravelCalc">Time to Rest</a> - <a href="https://developer.garmin.com/connect-iq/monkey-c/">Monkey C</a></p>
+        </article>
+        <article class="page__article">
+            <h3 class="page__article-title">Job History</h3>
             <ul>
-                <li>
-                    <h4>Playtech</h4>
-                    Since spring of 2020
+                <li class="page__article-item">
+                    <a href="https://www.playtech.com/">Playtech</a>
+                    <p>Senior Full Stack Engineer</p>
                 </li>
-                <li>
-                    <h4>Badoo/Bumble</h4>
-                    Almost 6 years
+                <li class="page__article-item">
+                    <a href="https://badoo.com/">Badoo/Bumble</a>
+                    <p>Senior Frontend Engineer. Almost 6 years</p>
                 </li>
-                <li>
-                    <h4>Something else...</h4>
+                <li class="page__article-item">
+                    <a href="https://nebo.ru/">Sky in diamonds</a>
+                    <p>Lead Frontend Engineer</p>
+                </li>
+                <li class="page__article-item">
+                    <a href="https://lamoda.ru/">Lamoda</a>
+                    <p>Senior Frontend Engineer</p>
+                </li>
+                <li class="page__article-item">
+                    <a href="https://creara-media.ru/">Creara Media</a> - closed
+                    <p>Frontend Engineer</p>
+                </li>
+                <li class="page__article-item">
+                    <a href="https://blondinka.ru/">Blondinka.ru</a>
+                    <p>Full Stack Engineer</p>
                 </li>
             </ul>
         </article>
     </section>
 
     <footer class="footer content">
-        Yes, the colour of the background is constantly changing
+<!--        Yes, the colour of the background is constantly changing-->
     </footer>
-
-    <script type="module" src="./scripts.js"></script>
 </body>
 </html>

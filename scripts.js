@@ -6,7 +6,7 @@ const changeBG = () => {
 };
 
 const getRandomColor = () => {
-    const trans = '0.05'; // 5% transparency
+    const trans = '0.08'; // 8% transparency
     let color = 'rgba(';
     for (let i = 0; i < 3; i++) {
         color += Math.floor(Math.random() * 255) + ',';

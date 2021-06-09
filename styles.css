@@ -4,17 +4,36 @@
 }
 body {
     margin: 0;
-    transition: background-color 1s;
-    font-family: system-ui;
     display: grid;
-    grid-template-columns: minmax(200px, 300px) minmax(400px, 1024px) auto;
-    grid-template-rows: 150px auto 150px;
+    grid-template-columns: minmax(100px, 200px) minmax(400px, 900px) auto;
+    grid-template-rows: 80px auto 150px;
     height: 100vh;
-    font-size: 1.2em;
+    font-size: 16px;
+    font-family: Roboto,Helvetica,sans-serif;
+    font-feature-settings: "onum" 1;
+    text-rendering: optimizeLegibility;
+    background-color: #000;
+    font-weight: 300;
+    color: #fff;
+}
+
+article {
+    margin-bottom: 30px;
+}
+
+p {
+    padding-bottom: 10px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #666;
 }
 
 h1 {
     padding-bottom: 15px;
+    color: #555;
 }
 h2 {
     padding-bottom: 10px;
@@ -26,6 +45,21 @@ h4 {
     padding-bottom: 0;
 }
 
+a {
+    color: #C7C229;
+}
+a:visited {
+    color: #C7C229;
+}
+a:hover {
+    color: yellowgreen;
+    text-decoration: none;
+}
+
+ul {
+    padding: 5px 0 20px 30px;
+}
+
     .sidebar {
         grid-column-start: 1;
         grid-column-end: 2;
@@ -33,15 +67,17 @@ h4 {
         grid-row-end: 4;
 
         color: #afadad;
-        background-color: black;
+        background-color: #333;
+        border-right: 1px solid #fff;
     }
+        .sidebar h1, .sidebar h2, .sidebar h3, .sidebar h4 {
+            color: #eee;
+        }
+
         .sidebar_nav__list {
             padding: 5px 0 20px 30px;
             text-decoration: none;
         }
-            .sidebar_nav__list li {
-                font-size: 1.15em;
-            }
                 .sidebar_nav__list li a {
                     padding: 5px 0;
                     display: inline-block;
@@ -60,14 +96,17 @@ h4 {
 
     .header {
         grid-column-start: 2;
-        grid-column-end: 3;
+        grid-column-end: 4;
         grid-row-start: 1;
         grid-row-end: 2;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
     }
+        .header__title {
+            padding: 0;
+            color: #6976FB;
+        }
+            .header__title_page-name {
+                color: #1AB41E;
+            }
 
     .page {
         grid-column-start: 2;
@@ -79,9 +118,19 @@ h4 {
         flex-direction: column;
         justify-content: flex-start;
     }
+
         .page__article {
             margin-bottom: 30px;
         }
+            .page__article-title {
+
+            }
+            .page__article-item {
+                margin-bottom: 20px;
+            }
+                .page__article-item_title {
+                    font-size: 0.9em;
+                }
 
     .footer {
         grid-column-start: 2;
@@ -91,7 +140,7 @@ h4 {
     }
 
 .content {
-    padding: 10px;
+    padding: 20px;
 }
 
 code {
@@ -101,182 +150,8 @@ code {
     display: block;
     border-radius: 5px;
     margin: 10px 0;
-    font-size: 1.2em;
-}
-.grid {
-    width: 600px;
-    margin: 0 auto;
-    border-top: 1px solid;
-    border-left: 1px solid;
-    position: relative;
-    background-color: white;
 }
 
-.grid__row {
-     display: flex;
-     justify-content: space-between;
-     border-bottom: 1px solid;
- }
-.grid__cell {
-    text-align: center;
-    flex: 1 0 auto;
-    height: auto;
-    align-items: center;
-    border-right: 1px solid;
-    transition: background-color 0.2s, background-image 0.5s;
-    cursor: pointer;
-    background-size: 100%;
-}
-
-.grid__cell.is-selected {
-     cursor: default;
- }
-
-.grid__cell.type-x {
-     background-image: url("./images/x-mark-512.png");
- }
-
-.grid__cell.type-o {
-     background-image: url("./images/circle-outline-512.png");
- }
-
-.grid__cell:hover {
-     background-color: #eee;
- }
-
-.grid__cell:before {
-     content: '';
-     float: left;
-     padding-top: 100%;
- }
-
-
-.grid__result {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 1px;
-    bottom: 1px;
-    background-color: #fff;
-    opacity: 0.9;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.grid__result_restart {
-    cursor: pointer;
-    color: #2667B6;
-    font-size: 20px;
-}
-.grid__result_restart:hover {
-     text-decoration: underline;
- }
-
-.controls {
-    margin: 10px 0 20px;
-}
-.controls__button {
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-.veil {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(100%, 100%, 100%, 0.8);
-    display: flex;
-    justify-content: center;
-}
-
-.hidden {
-    display: none;
-}
-
-.mine__grid {
-    display: inline-block;
-    background-color: white;
-}
-.mine__grid .row {
-    height: 30px;
-    display: flex;
-    justify-items: center;
-}
-    .mine__grid .cell {
-        width: 30px;
-        height: 30px;
-        border: 1px solid #666;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        font-size: 12px;
-        text-align: center;
-        font-weight: 900;
-        margin: 0 -1px -1px 0;
-        position: relative;
-    }
-    .cell__type1 {
-        color: green;
-    }
-    .cell__type2 {
-        color: blue;
-    }
-    .cell__type3 {
-        color: saddlebrown;
-    }
-    .cell__type4 {
-        color: fuchsia;
-    }
-    .cell__type5 {
-        color: darkorange;
-    }
-    .cell__type6 {
-        color: sienna;
-    }
-    .cell__type7 {
-        color: aqua;
-    }
-    .cell__type8 {
-        color: darkmagenta;
-    }
-    .cell__type9 {
-        color: red;
-        background-color: black;
-    }
-    .cell__type9:after {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        content: "X";
-        background-color: black;
-        color: red;
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .mine__grid .cell.closed {
-        position: relative;
-    }
-    .mine__grid .cell.closed:after {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        content: "";
-        background-color: gray;
-    }
-    .finished .cell.closed:after {
-        display: none;
-    }
 /*MEDIA*/
 @media only screen and (max-width: 650px) {
     body {
